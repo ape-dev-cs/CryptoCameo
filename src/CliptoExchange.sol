@@ -43,7 +43,7 @@ contract CliptoExchange {
     /// @notice Register a new creator
     function registerCreator(string memory name, uint256 cost) external {
         // Set a new creator.
-        creators[msg.sender] = Creator({name: name, cost: cost});
+        creators[msg.sender] = Creator({name: name, cost: cost, reputation: 0});
 
         // Emit event.
         emit CreatorRegistered(msg.sender, name, cost);
